@@ -1,6 +1,6 @@
 # EX01 Developing a Simple Webserver
 
-# Date:
+# Date: 17/09/2025
 # AIM:
 To develop a simple webserver to serve html pages and display the configuration details of laptop.
 
@@ -526,7 +526,8 @@ content ='''
     </script>
 </body>
 
-</html>'''
+</html>
+
 class Myserver(BaseHTTPRequestHandler):
     def do_GET(self):
         print("Get request received...")
