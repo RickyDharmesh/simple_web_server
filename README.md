@@ -21,9 +21,9 @@ Serving the HTML pages.
 Testing the webserver.
 
 # PROGRAM:
-
+'''
 from http.server import HTTPServer,BaseHTTPRequestHandler
-content ="""
+content =
 <html>
 
 <head>
@@ -526,7 +526,7 @@ content ="""
     </script>
 </body>
 
-</html>"""
+</html>
 
 class Myserver(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -538,7 +538,8 @@ class Myserver(BaseHTTPRequestHandler):
 print("This is my webserver")
 server_address=('',8000)
 httpd=HTTPServer(server_address,Myserver)
-httpd.serve_forever()       
+httpd.serve_forever()  
+'''    
 
 ## OUTPUT:
 ![alt text](<Screenshot 2025-09-17 084706.png>)
