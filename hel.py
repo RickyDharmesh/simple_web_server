@@ -2,6 +2,8 @@ from http.server import HTTPServer,BaseHTTPRequestHandler
 content ='''
 <html>
 
+<body bgcolor="blue" style="color:white;">
+
 <h1>
     TCP/IP NETWORK MODEL
 </h1>
@@ -51,6 +53,8 @@ content ='''
 <h4>
     Provide the Physical interface for data transmission.
 </h4>
+
+</body>
 
 </html>
 

@@ -24,8 +24,10 @@ Testing the webserver.
 # PROGRAM:
 ```
 from http.server import HTTPServer,BaseHTTPRequestHandler
-content = '''
+content ='''
 <html>
+
+<body bgcolor="blue" style="color:white;">
 
 <h1>
     TCP/IP NETWORK MODEL
@@ -77,12 +79,13 @@ content = '''
     Provide the Physical interface for data transmission.
 </h4>
 
+</body>
+
 </html>
 
 
 '''
-
-
+          
 
 class Myserver(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -94,18 +97,14 @@ class Myserver(BaseHTTPRequestHandler):
 print("This is my webserver")
 server_address=('',8000)
 httpd=HTTPServer(server_address,Myserver)
-httpd.serve_forever()  
+httpd.serve_forever()
 ```
 
 ## OUTPUT:
-![alt text](<Screenshot 2025-09-19 153111.png>)
 
+![alt text](<Screenshot 2025-09-22 105806.png>)
 
-![alt text](<Screenshot 2025-09-19 153140.png>)
-
-
-
-
+![alt text](<Screenshot 2025-09-22 105822.png>)
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
