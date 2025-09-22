@@ -25,65 +25,101 @@ Testing the webserver.
 ```
 from http.server import HTTPServer,BaseHTTPRequestHandler
 content ='''
+<!DOCTYPE html>
 <html>
+<head>
+    <title>TCP/IP Network Model</title>
+    <style>
+        body
+        {
+            background-color: #0077b6;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1
+        {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        h3
+        {
+            color: #ffdd00;
+            margin-top: 25px;
+        }
+        table 
+        {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+        th, td 
+        {
+            border: 1px solid white;
+            padding: 12px;
+            text-align: left;
+        }
+        th
+        {
+            background-color: #023e8a;
+            color: #ffdd00;
+        }
+        tr:nth-child(even)
+         {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
 
-<body bgcolor="blue" style="color:white;">
+    <h1>TCP/IP Network Model</h1>
 
-<h1>
-    TCP/IP NETWORK MODEL
-</h1>
+    <h3>Overview:</h3>
+    <p>The TCP/IP model is a framework that defines how data should be transmitted over networks. It consists of layers, each with specific responsibilities.</p>
 
+    <h3>Layers Description:</h3>
+    <table>
+        <tr>
+            <th>Layer</th>
+            <th>Function</th>
+            <th>Examples</th>
+        </tr>
+        <tr>
+            <td>Application Layer</td>
+            <td>Provides network services to end-users and applications.</td>
+            <td>HTTP, FTP, SMTP</td>
+        </tr>
+        <tr>
+            <td>Transport Layer</td>
+            <td>Ensures reliable or fast delivery of data between devices (error detection, flow control).</td>
+            <td>TCP, UDP</td>
+        </tr>
+        <tr>
+            <td>Network Layer</td>
+            <td>Handles logical addressing and routing of data packets from source to destination.</td>
+            <td>IP, ICMP</td>
+        </tr>
+        <tr>
+            <td>Data Link Layer</td>
+            <td>Combines raw bits into frames, handles error recovery and retransmissions.</td>
+            <td>Ethernet, ARP</td>
+        </tr>
+        <tr>
+            <td>Physical Layer</td>
+            <td>Provides the physical interface for transmission of raw bits over a medium.</td>
+            <td>Cables, Hubs</td>
+        </tr>
+    </table>
 
-<br>
-
-
-<h3>
-    Application Layer:
-</h3>
-
-<h4>
-    Provides network services to users and applications.
-</h4>
-
-<h4>
-    Eg:HTTP,FTP
-</h4>
-
-<h3>
-    Transport Layer:
-</h3>
-<h4>
-    Ensures reliable or fast delivery of data between devices.
-</h4>
-
-<h3>
-    Network Layer:
-</h3>
-<h4>
-    Logical addressing and rounting of data packet from source to destination by identifing neighbors.
-</h4>
-
-<h3>
-  Data Link Layer:
-
-</h3>
-
-<h4>
-    combine raw data into frames,errorrecovery and retransmissions.
-</h4>
-
-<h3>
-    Physical Layer:
-</h3>
-<h4>
-    Provide the Physical interface for data transmission.
-</h4>
+    <h3>Key Points:</h3>
+    <ul>
+        <li>Each layer interacts with the layer above and below it.</li>
+        <li>TCP/IP model is the basis for the modern Internet.</li>
+        <li>It is simpler than the OSI model but widely used in practice.</li>
+    </ul>
 
 </body>
-
 </html>
-
-
 '''
           
 
@@ -101,10 +137,11 @@ httpd.serve_forever()
 ```
 
 ## OUTPUT:
+![alt text](<Screenshot 2025-09-22 111321.png>)
 
-![alt text](<Screenshot 2025-09-22 105806.png>)
 
-![alt text](<Screenshot 2025-09-22 105822.png>)
+![alt text](<Screenshot 2025-09-22 111434.png>)
+
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
